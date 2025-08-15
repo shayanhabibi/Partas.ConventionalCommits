@@ -262,4 +262,19 @@ Message
             |> ConventionalCommit.parse
             |> Expect.expect expected
             ()
+        test "No body, all footers" {
+            let expected = Conventional {
+                emptyCommit with
+                    Footers = [
+                        Footer("footer","value")
+                        Footer("footsy","tees")
+                    ]
+            }
+            "type: subject
+
+footer: value
+footsy: tees"
+            |> ConventionalCommit.parse
+            |> Expect.expect expected
+        }
     ]

@@ -24,10 +24,6 @@ paket install Partas.Tools.ConventionalCommits
 Tests check for correctness according [to the spec][Conventional Commit]. Ambiguity in the spec has left some ambiguity that I describe below:
 
 > [NOTE!]
-> Conventional Commit spec describes footers as being required to be separated from the Body by one new line.
-> There is no description of the requirements if there is no body.
-
-> [NOTE!]
 > Conventional Commit spec does not put any requirement for the content of a footer value, other than it HAS to follow a footer key by a valid delimiter: ": "  or " #". You can technically EOF right after, or just provide no value, and that is still a footer.
 
 [Conventional Commit]: https://www.conventionalcommits.org/en/v1.0.0/#specification

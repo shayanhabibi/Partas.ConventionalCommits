@@ -40,8 +40,7 @@ module internal Parsers =
 
     /// Parses a footer section
     let pFooters =
-        newline
-        >>. many (tuple2 pFooterKey pFooterValue |>> makeFooter)
+        many (tuple2 pFooterKey (pFooterValue |>> _.Trim()) |>> makeFooter)
         <|> (eof >>% [||].ToImmutableArray())
             
     /// Prases '!' Breaking indication in type
@@ -81,8 +80,12 @@ module internal Parsers =
         reader |> parser {
             let! struct (typ,scope,_) = pTypeAndScope
             let! description = ws >>. pDescription
-            let! body = pBody
-            let! footers = pFooters
+            let! isFooter = (lookAhead (ws >>. pFooterKey) >>% true) <|> preturn false
+            let! body =
+                if not isFooter
+                then pBody
+                else preturn null
+            let! footers = ws >>. pFooters
             let! isBreaking = getUserState
             return {
                 Type = typ

@@ -13,11 +13,11 @@
         <Authors>Shayan Habibi</Authors>
         <Copyright>Copyright (c) Shayan Habibi 2025</Copyright>
         
-        <Version>0.2.0</Version>
-        <PackageVersion>0.2.0</PackageVersion>
+        <Version>0.3.0</Version>
+        <PackageVersion>0.3.0</PackageVersion>
         
         <GitNetScope>Core</GitNetScope>
-        <GitNetInitialVersion>0.2.0</GitNetInitialVersion>
+        <GitNetInitialVersion>0.3.0</GitNetInitialVersion>
         <GitNetAutoBump>true</GitNetAutoBump>
         <GitNetAutoBumpBranchName>master</GitNetAutoBumpBranchName>
         
