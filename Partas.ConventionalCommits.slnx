@@ -1,0 +1,14 @@
+﻿<Solution>
+  <Folder Name="/misc/" >
+      <File Path="README.md"/>
+  </Folder>
+  <Folder Name="/misc/public/">
+      <File Path="public/Partas_d00b_00a icon.png" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="Partas.ConventionalCommits\Partas.ConventionalCommits.fsproj" Type="Classic F#" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="Tests\Partas.ConventionalCommits.Tests\Partas.ConventionalCommits.Tests.fsproj" Type="Classic F#" />
+  </Folder>
+</Solution>
